@@ -12,13 +12,17 @@ getSumBtn.addEventListener("click", function () {
   let table = document.getElementById("table");
 
   let tr = document.createElement("tr");
+	let td1=document.createElement('td')
+	let td2=document.createElement('td')
+	
   tr.id = "ans";
+td1.innerText='Total Price'
+	td2.innerText=sum
+  
 
-  const td = document.createElement("td");
+  // td.colSpan = 2;
+  // td.innerText = "Total Price: Rs " + sum;
 
-  td.colSpan = 2;
-  td.innerText = "Total Price: Rs " + sum;
-
-  tr.appendChild(td);
+  tr.append(td1,td2);
   table.appendChild(tr);
 });
